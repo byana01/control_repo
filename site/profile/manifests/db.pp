@@ -6,5 +6,11 @@ tomcat::install { '/apps/tomcat':
 }
 tomcat::instance { 'default':
   catalina_home => '/apps/tomcat',
+  catalina_base => '/apps/tomcat',
+}
+
+tomcat::config::server { 'default':
+  catalina_base => '/apps/tomcat',
+  port          => '8006',
 }
 }
