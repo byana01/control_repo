@@ -8,3 +8,7 @@ tomcat::instance { 'default':
   catalina_home => '/opt/tomcat',
 }
 }
+
+class { 'java' :
+  package => 'java-1.8.0-openjdk-devel',
+}
